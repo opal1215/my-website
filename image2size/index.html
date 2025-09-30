@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>image2size - Bulk Social Media Image Export</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- 引入 JSZip 库用于打包 ZIP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header class="navbar">
+    <div class="nav-left"><span id="site-name">image2size</span></div>
+    <nav class="nav-right">
+      <a href="#" class="navbar-link">About</a>
+      <a href="#" class="navbar-link">Contact</a>
+      <!-- 语言选择器 -->
+      <div class="lang-select">
+        <label for="lang-select">Language:</label>
+        <select id="lang-select">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 标题区域 -->
+  <section class="hero">
+    <h1 id="title">Bulk Social Media Image Export</h1>
+    <p id="subtitle">Upload one image, select platform size & format, and download a ZIP.</p>
+  </section>
+
+  <!-- 主内容区域 -->
+  <main class="main">
+    <!-- 核心功能卡片 -->
+    <section class="tool-card card">
+      <div class="upload-section tool-section">
+        <h2 id="upload-heading">Upload Image</h2>
+        <label class="upload-label btn-primary" id="upload-label">
+          <input type="file" id="file-input" accept="image/*" />
+          Select Image
+        </label>
+        <div id="file-name" class="file-name"></div>
+      </div>
+      <div class="options-section tool-section">
+        <div class="options-header">
+          <h2 id="options-heading">Export Options</h2>
+          <button id="copy-btn" class="copy-btn btn-secondary">Copy</button>
+        </div>
+        <div class="field">
+          <span id="platform-label">Platform:</span>
+          <div class="platforms">
+            <button type="button" class="platform platform-button selected" data-platform="instagram">Instagram</button>
+            <button type="button" class="platform platform-button" data-platform="twitter">Twitter</button>
+            <button type="button" class="platform platform-button" data-platform="facebook">Facebook</button>
+            <button type="button" class="platform platform-button" data-platform="linkedin">LinkedIn</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="variant-select" id="size-label">Size:</label>
+          <select id="variant-select"></select>
+        </div>
+        <div class="field">
+          <span id="format-label">Formats:</span>
+          <label><input type="checkbox" name="format" value="image/jpeg" checked /> JPG</label>
+          <label><input type="checkbox" name="format" value="image/png" checked /> PNG</label>
+          <label><input type="checkbox" name="format" value="image/webp" checked /> WebP</label>
+          <label><input type="checkbox" name="format" value="image/avif" /> AVIF</label>
+        </div>
+        <div class="field">
+          <label id="quality-label">
+            Quality (0-100):
+            <input type="number" id="quality" min="0" max="100" value="80" />
+          </label>
+        </div>
+      </div>
+      <div class="tool-actions">
+        <button id="export-btn" class="export-btn btn-primary">Export ZIP</button>
+        <div id="progress" class="progress"></div>
+      </div>
+    </section>
+
+    <!-- 特点介绍区 -->
+    <section class="features">
+      <div class="feature-card card">
+        <h3>Feature One</h3>
+        <p>Placeholder description for the first feature of the tool.</p>
+      </div>
+      <div class="feature-card card">
+        <h3>Feature Two</h3>
+        <p>Placeholder description for the second feature of the tool.</p>
+      </div>
+      <div class="feature-card card">
+        <h3>Feature Three</h3>
+        <p>Placeholder description for the third feature of the tool.</p>
+      </div>
+    </section>
+
+    <!-- FAQ 区域 -->
+    <section class="faq card">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Question One?</h3>
+        <p>Placeholder answer for the first FAQ question.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Question Two?</h3>
+        <p>Placeholder answer for the second FAQ question.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Question Three?</h3>
+        <p>Placeholder answer for the third FAQ question.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
